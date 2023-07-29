@@ -1,5 +1,8 @@
-console.log("test pop")
-var test = document.getElementById("add")
-test.addEventListener("change",(e)=>{
-    chrome.storage.sync.set({"elem":e.target.value})
-})
+
+ let clocDown = document.getElementById("clocDown")
+ clocDown.style.width ="50px"
+ setInterval(()=>{chrome.storage.sync.get("clocDown",(data)=>{
+    
+   clocDown.innerHTML = data.clocDown
+ 
+ })},1000)

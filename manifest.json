@@ -2,6 +2,7 @@
     "manifest_version": 2,
     "name": "Ad-scan",
     "version": "0.1",
+    "options_page":"options.html",
     "permissions":["webRequest","storage"],
     "content_scripts": [
     {
@@ -13,4 +14,5 @@
    ,"browser_action":{
     "default_popup":"popup.html"
    }
+   
 }
