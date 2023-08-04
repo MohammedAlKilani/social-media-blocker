@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="options.css">
     
     
 </head>
@@ -20,15 +21,19 @@
     <select  id="minutes"></select>
     <select id="amOrBm">
         <option>Am</option>
-        <option>Bm</option>
+        <option>Pm</option>
     </select>
 
 
-    <input type="button" value="save" id="saveButton">
-
-    
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-primary">This is a primary list group item</li>
+    <input type="button" value="save" id="saveButton" >
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-success" type="button" id="addUrl">Add url</button>
+        </div>
+        <input type="text" class="form-control" placeholder="URL for 1 site link https://www.youtube.com/ OR href for all sites have www.youtube.com" aria-label="" aria-describedby="basic-addon1" id="urlBlokTextBox">
+      </div>
+    <ul class="list-group" id="lestUrl">
+        
 
     </ul>
 <script src="options.js" ></script>
