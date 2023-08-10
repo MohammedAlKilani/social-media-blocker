@@ -6,6 +6,11 @@ var amOrBm =$("#amOrBm")
 var addUrl =$("#addUrl")
 var urlBlokTextBox =$("#urlBlokTextBox")
 var ArryUrlBloker = []
+var rong =$("#rong")
+urlBlokTextBox.keydown(function () { 
+    rong.html("")
+    
+});
 chrome.storage.sync.get("ArryUrlBloker",(data)=>{
     console.log(Array.isArray(data.ArryUrlBloker))
     if(Array.isArray(data.ArryUrlBloker)){
@@ -70,6 +75,8 @@ addUrl.on("click",()=>{
         chrome.storage.sync.set({ "ArryUrlBloker":ArryUrlBloker})
         pushInlestUrl(urlBlokText)
         }
+        }else{
+            rong.html("Not accept")
         }
         
     })  
